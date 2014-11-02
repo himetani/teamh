@@ -21,10 +21,13 @@
     <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/directive/navbar/simple-sidebar.css">
+      <link rel="stylesheet" href="app/directive/simple-sidebar.css">
+      <link rel="stylesheet" href="app/route/addTask/addTask.css">
+      <link rel="stylesheet" href="app/route/addTask/simple-sidebar.css">
       <link rel="stylesheet" href="app/route/task/bootstrap.min.css">
       <link rel="stylesheet" href="app/route/task/simple-sidebar.css">
       <link rel="stylesheet" href="app/route/task/task.css">
-      <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
@@ -61,16 +64,21 @@
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+      <script src="bower_components/angular-socket-io/socket.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/directive/navbar/navbar.directive.js"></script>
+          <script src="app/factory/socket/socket.service.js"></script>
+          <script src="app/route/addTask/addTask.controller.js"></script>
+          <script src="app/route/addTask/addTask.js"></script>
           <script src="app/route/task/task.controller.js"></script>
           <script src="app/route/task/task.js"></script>
-          <script src="components/modal/modal.service.js"></script>
-          <script src="components/navbar/navbar.controller.js"></script>
+          <script src="app/socket.io.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->
 </body>

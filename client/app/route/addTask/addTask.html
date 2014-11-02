@@ -1,0 +1,147 @@
+<div id="wrapper">
+    <!--
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Start Bootstrap
+                </a>
+            </li>
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li>
+                <a href="#">Shortcuts</a>
+            </li>
+            <li>
+                <a href="#">Overview</a>
+            </li>
+            <li>
+                <a href="#">Events</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+    -->
+    <navbar></navbar>
+    <div id="page-content-wrapper">
+        <div class="page-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Add Tasks</h1>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">タスクを追加する</button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" collapse="isCollapsed">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-10">
+                <form role="form" type="post">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="form-group col-lg-4">
+                                    <label for="taskName">タスク名</label>
+                                    <input ng-required="false" ng-model="form.taskName" type="text" class="form-control" id="taskName">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-4">
+                                    <label for="creatorName">作成者</label>
+                                    <select ng-model="form.creatorName" ng-required="true" id="creatorName" class="form-control">
+                                        <option ng-repeat="user in users">{{user}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label for="term">見積り工数</label>
+                                    <input ng-required="false" ng-model="form.term" type="number" id="term">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 form-group">
+                                    <label for="timeLimit">締切日</label>
+                                    <p class="input-group">
+                                        <input id="timeLimit" ng-model="form.timeLimit" type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-4">
+                                    <label for="assignedName">担当者</label>
+                                    <select id="assigenName" ui-validate=" '$value==A' " ng-model="form.assignedName" ng-required="true" class="form-control">
+                                        <option ng-repeat="user in users">{{user}}</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label for="point">Point</label>
+                                    <input ng-disabled='auth' type="number" id="point">
+                                </div>
+                            </div>
+                            <button type="submit" ng-click="submit($event)" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-1">
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>タスク名</td>
+                                        <td>作成者</td>
+                                        <td>作成時間</td>
+                                        <td>見積もり時間</td>
+                                        <td>締切時間</td>
+                                        <td>担当者</td>
+                                        <td>pt</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="task in tasks">
+                                            <td>{{task.taskName}}</td>
+                                            <td>{{task.creatorName}}</td>
+                                            <td>{{task.createdTime}}</td>
+                                            <td>{{task.term}}</td>
+                                            <td>{{task.timeLimit}}</td>
+                                            <td>{{task.assignedName}}</td>
+                                            <td>{{task.point}}</td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

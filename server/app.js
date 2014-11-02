@@ -15,9 +15,20 @@ var server = require('http').createServer(app);
 require('./config/express')(app);
 require('./routes')(app);
 
+
 // Start server
 server.listen(config.port, config.ip, function () {
-  console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+    console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+});
+
+var socketIO = require('socket.io');
+var io = socketIO.listen(server);
+
+io.sockets.on('connection', function(socket) {
+    socket.on('add', function(data) {
+        console.log(data);
+        socket.broadcast.emit('receive', data);
+    });
 });
 
 // Expose app

@@ -5,7 +5,9 @@ angular.module('teamhApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.utils',
+  'btford.socket-io'
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider

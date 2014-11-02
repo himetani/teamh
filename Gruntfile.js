@@ -57,6 +57,7 @@ module.exports = function (grunt) {
     watch: {
       injectJS: {
         files: [
+            '/socket.io/socket.io.js',
           '<%= yeoman.client %>/{app,components}/**/*.js',
           '!<%= yeoman.client %>/{app,components}/**/*.spec.js',
           '!<%= yeoman.client %>/{app,components}/**/*.mock.js',
