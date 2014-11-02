@@ -1,0 +1,12 @@
+.tab-cen{
+    border-radius:30px;
+    width: 150px;
+    height: 150px;
+    background:RoyalBlue ;
+    display:table;
+    text-align: center;
+}
+.tab-cen > *{
+    display:table-cell;
+    vertical-align: middle;
+}

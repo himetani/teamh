@@ -1,0 +1,6 @@
+div.box {
+    display: -moz-inline-box; /*for Firefox 2*/
+    display: inline-block; /*for modern*/
+    /display: inline; /*for ie5Å`7*/
+    /zoom: 1; /*for ie5Å`7*/
+}
