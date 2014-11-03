@@ -58,7 +58,7 @@ angular.module('teamhApp')
     var TestCreator = function () {
         var form = {
             taskName    : 'オフィスの整理',
-            creatorName : 'A',
+            creatorName : '塚本',
             createdTime : '2014/11/1',
             term        : '30',
             timeLimit   : '2014/11/25',
@@ -80,6 +80,7 @@ angular.module('teamhApp')
         event.preventDefault();
         var timeLimit = $filter('date')($scope.form.timeLimit, 'yyyy/MM/dd');
         $scope.form.timeLimit = timeLimit;
+        $scope.form.creatorName = $scope.user;
         $scope.form.createdTime = $filter('date')(new Date(), 'yyyy/MM/dd');
         $scope.tasks.push($scope.form);
         socket.emit('add', $scope.form);
