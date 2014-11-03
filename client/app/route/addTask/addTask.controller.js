@@ -91,6 +91,10 @@ angular.module('teamhApp')
         $scope.tasks.push(data);
     });
 
+    socket.on('point', function (data) {
+        //console.log(data);
+        $scope.tasks[data.index].point = data.newVal;
+    });
   
     /*
     $http({

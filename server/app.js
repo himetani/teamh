@@ -29,6 +29,11 @@ io.sockets.on('connection', function(socket) {
         console.log(data);
         socket.broadcast.emit('receive', data);
     });
+
+    socket.on('point', function (data) {
+        console.log(data);
+        socket.broadcast.broadcast.emit('point', data);
+    });
 });
 
 // Expose app
