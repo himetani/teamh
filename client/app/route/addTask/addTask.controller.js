@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('teamhApp')
-.controller('AddtaskCtrl', function ($scope, $filter, socket) {
+.controller('AddtaskCtrl', function ($scope, $filter, socket, $http) {
     $scope.isCollapsed = true;
 
     //Date Picker
@@ -92,4 +92,17 @@ angular.module('teamhApp')
         $scope.tasks.push(data);
     });
 
+    $http({
+        method: 'POST',
+            url:'http://192.168.100.102:8888/all.php',
+        data:$.param({user: {id: 1234}}),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        
+        }
+    }).success(function (data) {
+        console.log(data);
+    }).error(function (error) {
+        console.log(error);
+        });        
 });

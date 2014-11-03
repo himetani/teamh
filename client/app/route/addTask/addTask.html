@@ -1,36 +1,4 @@
 <div id="wrapper">
-    <!--
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Start Bootstrap
-                </a>
-            </li>
-            <li>
-                <a href="#">Dashboard</a>
-            </li>
-            <li>
-                <a href="#">Shortcuts</a>
-            </li>
-            <li>
-                <a href="#">Overview</a>
-            </li>
-            <li>
-                <a href="#">Events</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-    </div>
-    -->
     <navbar></navbar>
     <div id="page-content-wrapper">
         <div class="page-header">
@@ -41,6 +9,10 @@
                         <ul class="nav navbar-top-links navbar-right">
                             <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">タスクを追加する</button>
                         </ul>
+                        <ul class="nav navbar-top-links navbar-left">
+                            <p>ようこそ{{user}}さん</p>
+                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -128,14 +100,14 @@
                                 </thead>
                                 <tbody>
                                     <tr ng-repeat="task in tasks">
-                                            <td>{{task.taskName}}</td>
-                                            <td>{{task.creatorName}}</td>
-                                            <td>{{task.createdTime}}</td>
-                                            <td>{{task.term}}</td>
-                                            <td>{{task.timeLimit}}</td>
-                                            <td>{{task.assignedName}}</td>
-                                            <td>{{task.point}}</td>
-                                        </tr>
+                                        <td>{{task.taskName}}</td>
+                                        <td>{{task.creatorName}}</td>
+                                        <td>{{task.createdTime}}</td>
+                                        <td>{{task.term}}</td>
+                                        <td>{{task.timeLimit}}</td>
+                                        <td>{{task.assignedName}}</td>
+                                        <td>{{task.point}}</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
