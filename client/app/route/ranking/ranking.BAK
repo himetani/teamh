@@ -117,7 +117,7 @@ rel="stylesheet">
 
 
 	　　<td>
-		<p style="font-size:20pt"><font color="red">　週刊</p>
+		<p style="font-size:20pt" onclick="alert('あなたの順位は123位です')"><font color="red">　週刊</p>
 		<!-- Table2 Start-->
 		
 		<table id="TDPlan" class="price">
@@ -166,7 +166,7 @@ rel="stylesheet">
 
 
 	　　<td>
-		<p style="font-size:20pt"><font color="RoyalBlue">月間</p>
+		<p style="font-size:20pt" onclick="alert('あなたの順位は87位です')"><font color="RoyalBlue">月間</p>
 		
 		<!-- Table3 Start-->
 		
