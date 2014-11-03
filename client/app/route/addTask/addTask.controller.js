@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('teamhApp')
-.controller('AddtaskCtrl', function ($scope, $filter, socket, $http) {
+.controller('AddtaskCtrl', function ($scope, $filter, socket, $http, modal) {
     $scope.isCollapsed = true;
 
     //Date Picker
@@ -57,13 +57,12 @@ angular.module('teamhApp')
 
     var TestCreator = function () {
         var form = {
-            taskName    : 'a',
-            creatorName : 'b',
-            createdTime : 'c',
-            term        : 'd',
-            timeLimit   : 'e',
-            assignedName: 'f',
-            point       : 'g'
+            taskName    : 'オフィスの整理',
+            creatorName : 'A',
+            createdTime : '2014/11/1',
+            term        : '30',
+            timeLimit   : '2014/11/25',
+            point       : 10
         };
         return form;
     };
@@ -74,9 +73,8 @@ angular.module('teamhApp')
     $scope.tasks = new Array();
     $scope.tasks.push(test);
 
-    $scope.users = ['A','B','C'];
-    $scope.role = 'user';
-    $scope.auth = $scope.role == 'user' ? true : false;
+    $scope.users = ['塚本','合原','松岡'];
+    //$scope.auth = $scope.auth == 'owner' ? true : false;
 
     $scope.submit = function (event) {
         event.preventDefault();
@@ -92,17 +90,25 @@ angular.module('teamhApp')
         $scope.tasks.push(data);
     });
 
+  
+    /*
     $http({
         method: 'POST',
-            url:'http://192.168.100.102:8888/all.php',
+        url:'http://192.168.100.102:8888/all.php',
         data:$.param({user: {id: 1234}}),
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
-        
+
         }
     }).success(function (data) {
         console.log(data);
     }).error(function (error) {
         console.log(error);
-        });        
+    });
+*/    
+
+    $scope.edit = function (index) {
+        $scope.index = index; 
+        modal.openModal($scope);    
+    };
 });

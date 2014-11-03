@@ -7,12 +7,15 @@
                     <div class="col-lg-12">
                         <h1>Add Tasks</h1>
                         <ul class="nav navbar-top-links navbar-right">
+                            <label for="user">User Name</label>
+                            <input id="user" ng-model="user">
+                            <label for="user">管理者権限</label>
+                            <input type='checkbox' id="user" ng-model="role">
                             <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">タスクを追加する</button>
                         </ul>
                         <ul class="nav navbar-top-links navbar-left">
                             <p>ようこそ{{user}}さん</p>
                         </ul>
-
                     </div>
                 </div>
             </div>
@@ -40,13 +43,13 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-lg-6">
-                                    <label for="term">見積り工数</label>
+                                    <label for="term">見積り(分)</label>
                                     <input ng-required="false" ng-model="form.term" type="number" id="term">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-4 form-group">
-                                    <label for="timeLimit">締切日</label>
+                                    <label for="timeLimit">締切日時</label>
                                     <p class="input-group">
                                         <input id="timeLimit" ng-model="form.timeLimit" type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
                                         <span class="input-group-btn">
@@ -55,6 +58,7 @@
                                     </p>
                                 </div>
                             </div>
+                            <!--
                             <div class="row">
                                 <div class="form-group col-lg-4">
                                     <label for="assignedName">担当者</label>
@@ -64,10 +68,11 @@
 
                                 </div>
                             </div>
+                            -->
                             <div class="row">
                                 <div class="form-group col-lg-6">
                                     <label for="point">Point</label>
-                                    <input ng-disabled='auth' type="number" id="point">
+                                    <input type="number" ng-model="form.point" id="point">
                                 </div>
                             </div>
                             <button type="submit" ng-click="submit($event)" class="btn btn-default">Submit</button>
@@ -82,36 +87,32 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Panel title</h3>
+                        <h3 class="panel-title"> タスク一覧</h3>
                     </div>
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <td>タスク名</td>
-                                        <td>作成者</td>
-                                        <td>作成時間</td>
-                                        <td>見積もり時間</td>
-                                        <td>締切時間</td>
-                                        <td>担当者</td>
-                                        <td>pt</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="task in tasks">
-                                        <td>{{task.taskName}}</td>
-                                        <td>{{task.creatorName}}</td>
-                                        <td>{{task.createdTime}}</td>
-                                        <td>{{task.term}}</td>
-                                        <td>{{task.timeLimit}}</td>
-                                        <td>{{task.assignedName}}</td>
-                                        <td>{{task.point}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <table class="panel-body table table-striped">
+                        <thead>
+                            <tr>
+                                <td>タスク名</td>
+                                <td>作成者</td>
+                                <td>作成日時</td>
+                                <td>見積り(分)</td>
+                                <td>締切日時</td>
+                                <!--<td>担当者</td>-->
+                                <td>pt</td>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            <tr ng-repeat="task in tasks">
+                                <td>{{task.taskName}}</td>
+                                <td>{{task.creatorName}}</td>
+                                <td>{{task.createdTime}}</td>
+                                <td>{{task.term}}</td>
+                                <td>{{task.timeLimit}}</td>
+                                <!--<td>{{task.assignedName}}</td>-->
+                                <td class="table-hover">{{task.point}}<button ng-click="edit($index)" ng-if="role" class="pull-right">edit<span class="glyphicon glyphicon-pencil text-right"></span></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
