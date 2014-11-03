@@ -2,7 +2,7 @@
 
 
 table.price {
-    width: 500px;
+    width: 270px;
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 1px 0;
@@ -23,11 +23,12 @@ table.price th {
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     font-size: 24px;
+    table-hover;
 }
 
 
 table.price th.c1 {
-    width: 125px;
+    width: 10px;
     background: rgb(162,206,26); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(97,174,36,1) 1%, rgba(86,155,32,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(97,174,36,1)), color-stop(100%,rgba(86,155,32,1))); /* Chrome,Safari4+ */
@@ -36,10 +37,34 @@ table.price th.c1 {
     background: -ms-linear-gradient(top,  rgba(97,174,36,1) 1%,rgba(86,155,32,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(97,174,36,1) 1%,rgba(86,155,32,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61ae24', endColorstr='#569b20',GradientType=0 ); /* IE6-9 */
-} 
+}
+
+table.price th.c1-2 {
+    width: 100px;
+    background: rgb(162,206,26); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(97,174,36,1) 1%, rgba(86,155,32,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(97,174,36,1)), color-stop(100%,rgba(86,155,32,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(97,174,36,1) 1%,rgba(186,155,32,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(97,174,36,1) 1%,rgba(86,155,32,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(97,174,36,1) 1%,rgba(86,155,32,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(97,174,36,1) 1%,rgba(86,155,32,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61ae24', endColorstr='#569b20',GradientType=0 ); /* IE6-9 */
+}  
  
 table.price th.c2 {
-    width: 75px;
+    width: 10px;
+    background: rgb(237,73,147); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(204,20,69,1) 1%, rgba(182,17,61,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(204,20,69,1)), color-stop(100%,rgba(182,17,61,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(204,20,69,1) 1%,rgba(182,17,61,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(204,20,69,1) 1%,rgba(182,17,61,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(204,20,69,1) 1%,rgba(182,17,61,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(204,20,69,1) 1%,rgba(182,17,61,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc1445', endColorstr='#b6113d',GradientType=0 ); /* IE6-9 */
+}
+
+table.price th.c2-2 {
+    width: 100px;
     background: rgb(237,73,147); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(204,20,69,1) 1%, rgba(182,17,61,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(204,20,69,1)), color-stop(100%,rgba(182,17,61,1))); /* Chrome,Safari4+ */
@@ -51,6 +76,7 @@ table.price th.c2 {
 }
  
 table.price th.c3 {
+    width: 10px;
     background: rgb(29,140,233); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(17,63,140,1) 1%, rgba(15,56,125,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(17,63,140,1)), color-stop(100%,rgba(15,56,125,1))); /* Chrome,Safari4+ */
@@ -60,6 +86,19 @@ table.price th.c3 {
     background: linear-gradient(to bottom,  rgba(17,63,140,1) 1%,rgba(15,56,125,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113f8c', endColorstr='#0f387d',GradientType=0 ); /* IE6-9 */
 }
+
+table.price th.c3-2 {
+    width: 100px;
+    background: rgb(29,140,233); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(17,63,140,1) 1%, rgba(15,56,125,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(17,63,140,1)), color-stop(100%,rgba(15,56,125,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(17,63,140,1) 1%,rgba(15,56,125,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(17,63,140,1) 1%,rgba(15,56,125,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(17,63,140,1) 1%,rgba(15,56,125,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(17,63,140,1) 1%,rgba(15,56,125,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113f8c', endColorstr='#0f387d',GradientType=0 ); /* IE6-9 */
+}
+
  
 table.price th:after {
     top: 69px;
