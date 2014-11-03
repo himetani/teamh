@@ -23,11 +23,12 @@ table.price th {
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     font-size: 24px;
+    table-hover;
 }
 
 
 table.price th.c1 {
-    width: 175px;
+    width: 125px;
     background: rgb(162,206,26); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(97,174,36,1) 1%, rgba(86,155,32,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(97,174,36,1)), color-stop(100%,rgba(86,155,32,1))); /* Chrome,Safari4+ */
@@ -39,7 +40,7 @@ table.price th.c1 {
 } 
  
 table.price th.c2 {
-    width: 30px;
+    width: 75px;
     background: rgb(237,73,147); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(204,20,69,1) 1%, rgba(182,17,61,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(204,20,69,1)), color-stop(100%,rgba(182,17,61,1))); /* Chrome,Safari4+ */
