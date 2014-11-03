@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <h3>ポイントの変更</h3>
+</div>
+<div class="modal-body">
+    <h4>現在のポイントは{{oldPoint}}です。</h4>
+    <label for="new">新しいポイント</label>
+    <input id="new" type="number" ng-required="true" ng-model="tasks[index].point" value="oldPoint">
+</div>
+<div class="modal-footer">
+    <button class="btn" data-ng-click="change()" type="button">変更</button>
+    <button class="btn btn-warning cancel" data-ng-click="cancel()" type="button">キャンセル</button>
+</div>
